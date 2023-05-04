@@ -17,17 +17,17 @@ export default function Index() {
      
       <div className="relative sm:pb-16 sm:pt-8">
         <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <nav className="bg-white border-b-4 border-indigo-500 dark:bg-gray-900">
+          <nav className="bg-[#ECEBEC] border-b-2 border-pink-500 dark:bg-gray-900">
                 <div className="max-w-screen-xl flex flex-wrap items-center mx-auto p-4 justify-between">
                   <div className="flex items-center">
                     <a href="https://whataline.com/" className="flex items-center">
                         <img src={logo} className="h-14 mr-3" alt="Whataline" />
                     </a>
                  
-                    <ul className="flex p-4 md:p-0 ml-6 items-center">
-                      <li><img src={insta} className="h-6 mr-4" alt="instagram" /></li>
-                      <li><img src={linkedin} className="h-8 mr-4" alt="linkedin" /></li>
-                      <li><img src={stage32} className="h-6 mr-4" alt="stage 32" /></li>
+                    <ul className="flex p-4 md:p-0 ml-10 items-center">
+                      <li><img src={insta} className="h-6 mr-10" alt="instagram" /></li>
+                      <li><img src={linkedin} className="h-8 mr-10" alt="linkedin" /></li>
+                      <li><img src={stage32} className="h-6 mr-10" alt="stage 32" /></li>
                     </ul>
                   </div>
                   <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
@@ -35,7 +35,7 @@ export default function Index() {
                     <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
                   </button>
                   <div className="hidden w-full md:block md:w-auto justify-items-end" id="navbar-default">
-                    <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-[#ECEBEC] dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                       <li>
                         <a href="#" className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
                       </li>
@@ -53,16 +53,16 @@ export default function Index() {
                 </div>
           </nav>
           <div className="flex justify-normal mx-auto max-w-7xl">
-            <a href="#" className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                <img className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg p-5" src={livelong} alt="Live Long"/>
+            <a href="#" className="flex flex-col items-center m-6 bg-pink-500 border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-[#E45286] dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <img className="object-cover w-full h-96 md:h-auto md:w-40 md:rounded-none m-5  border-gray-200 border-4" src={livelong} alt="Live Long"/>
                 <div className="flex flex-col justify-between p-4 leading-normal">
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Live Long</h5>
-                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Trapped in a temporal loop following a fatal accident, a beleaguered florist makes the ultimate sacrifice to free herself and save her soulmate from repeated death.</p>
-                </div>
+                    <h5 className="mb-2 text-2xl font-sans font-bold tracking-tight text-gray-900 dark:text-white">Live Long</h5>
+                    <p className="mb-3 font-normal font-sans text-gray-700 dark:text-gray-400">Trapped in a temporal loop following a fatal accident, a beleaguered florist makes the ultimate sacrifice to free herself and save her soulmate from repeated death.</p>
+                </div> 
             </a>
-            <a href="#" className="block max-w-xl p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Welcome to Kat's world</h5>
-                <p className="font-normal text-gray-700 dark:text-gray-400">Sometimes funny, sometimes messy. Always entertaining.
+            <a href="#" className="block max-w-xl p-6 m-6 bg-[#ECEBEC] border hover:bg-[#ECEBEC] dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                <h5 className="mb-2 text-2xl font-bold font-serif tracking-tight text-gray-900 dark:text-white">Welcome to Kat's world</h5>
+                <p className="font-normal font-serif  text-gray-700 dark:text-gray-400">Sometimes funny, sometimes messy. Always entertaining.
                 <br/><br/>
 
 Kat Rollinson is an award-winning screenwriter who continues to amass an impressive portfolio of features, pilots and shorts. She specialises in poignant comedy, romance and drama, often with a twist of magical realism. Her
