@@ -5,7 +5,9 @@ import insta from "../images/insta.svg";
 import linkedin from "../images/linkedin.svg";
 import stage32 from "../images/stage32.svg";
 import livelong from "../images/Live Long cover - Rustic.png"
-
+import logofacingright from  "../images/writer_sketch-removebg-preview.png";
+import awards from "../images/awards";
+ 
 import { useOptionalUser } from "~/utils";
 
 export const meta: V2_MetaFunction = () => [{ title: "Remix Notes" }];
@@ -52,13 +54,15 @@ export default function Index() {
                   </div>
                 </div>
           </nav>
-          <div className="flex justify-normal mx-auto max-w-7xl">
+          <div className="flex justify-normal mx-auto max-w-7xl border-b-2 border-pink-500">
             <a href="#" className="m-6 bg-pink-500 border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-[#E45286] dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                 <div className="md:flex-row md:max-w-xl flex flex-col items-start">
                   <img className="object-cover w-full h-96 md:h-auto md:w-40 md:rounded-none m-5  border-gray-200 border-4" src={livelong} alt="Live Long"/>
                   <div className="flex flex-col justify-between p-4 leading-normal">
-                      <h5 className="mb-2 text-2xl font-serif font-bold tracking-tight text-white dark:text-white px-4">
+                    <div className="max-w-s flex px-4 pb-4">
+                      <h5 className=" text-2xl font-serif font-bold tracking-tight text-white dark:text-white px-4">
                         Live Long</h5>
+                    </div>
                       <p className="mb-3 font-normal font-sans text-white dark:text-gray-400 px-4">Trapped in a temporal loop following a fatal accident, a beleaguered florist makes the ultimate sacrifice to free herself and save her soulmate from repeated death.</p>
                   </div> 
                 </div>
@@ -80,75 +84,23 @@ Kat Rollinson is an award-winning screenwriter who continues to amass an impress
 flair for creating quirky storylines and layered characters has resulted in incredible feedback, which has acknowledged her organic, charming, masterful storytelling that oozes full of life.</p>
             </a>
           </div>
-          </div>
+        </div>
 
-        <div className="mx-auto max-w-7xl px-4 py-2 sm:px-6 lg:px-8">
-          <div className="mt-6 flex flex-wrap justify-center gap-8">
-            {[
-              {
-                src: "https://user-images.githubusercontent.com/1500684/157764397-ccd8ea10-b8aa-4772-a99b-35de937319e1.svg",
-                alt: "Fly.io",
-                href: "https://fly.io",
-              },
-              {
-                src: "https://user-images.githubusercontent.com/1500684/157764395-137ec949-382c-43bd-a3c0-0cb8cb22e22d.svg",
-                alt: "SQLite",
-                href: "https://sqlite.org",
-              },
-              {
-                src: "https://user-images.githubusercontent.com/1500684/157764484-ad64a21a-d7fb-47e3-8669-ec046da20c1f.svg",
-                alt: "Prisma",
-                href: "https://prisma.io",
-              },
-              {
-                src: "https://user-images.githubusercontent.com/1500684/157764276-a516a239-e377-4a20-b44a-0ac7b65c8c14.svg",
-                alt: "Tailwind",
-                href: "https://tailwindcss.com",
-              },
-              {
-                src: "https://user-images.githubusercontent.com/1500684/157764454-48ac8c71-a2a9-4b5e-b19c-edef8b8953d6.svg",
-                alt: "Cypress",
-                href: "https://www.cypress.io",
-              },
-              {
-                src: "https://user-images.githubusercontent.com/1500684/157772386-75444196-0604-4340-af28-53b236faa182.svg",
-                alt: "MSW",
-                href: "https://mswjs.io",
-              },
-              {
-                src: "https://user-images.githubusercontent.com/1500684/157772447-00fccdce-9d12-46a3-8bb4-fac612cdc949.svg",
-                alt: "Vitest",
-                href: "https://vitest.dev",
-              },
-              {
-                src: "https://user-images.githubusercontent.com/1500684/157772662-92b0dd3a-453f-4d18-b8be-9fa6efde52cf.png",
-                alt: "Testing Library",
-                href: "https://testing-library.com",
-              },
-              {
-                src: "https://user-images.githubusercontent.com/1500684/157772934-ce0a943d-e9d0-40f8-97f3-f464c0811643.svg",
-                alt: "Prettier",
-                href: "https://prettier.io",
-              },
-              {
-                src: "https://user-images.githubusercontent.com/1500684/157772990-3968ff7c-b551-4c55-a25c-046a32709a8e.svg",
-                alt: "ESLint",
-                href: "https://eslint.org",
-              },
-              {
-                src: "https://user-images.githubusercontent.com/1500684/157773063-20a0ed64-b9f8-4e0b-9d1e-0b65a3d4a6db.svg",
-                alt: "TypeScript",
-                href: "https://typescriptlang.org",
-              },
-            ].map((img) => (
+        <div className="mx-auto max-w-7xl px-4 py-2 sm:px-6 lg:px-8 flex justify-normal">
+          <div className="mt-6 flex flex-wrap justify-center w-5/6 gap-8">
+            {
+             awards.map((img) => (
               <a
-                key={img.href}
-                href={img.href}
-                className="flex h-16 w-32 justify-center p-1 grayscale transition hover:grayscale-0 focus:grayscale-0"
+               // key={img.href}
+               href="test.com"
+                className="flex h-32 w-32 justify-center p-1"
               >
-                <img alt={img.alt} src={img.src} className="object-contain" />
+                <img src={img} className="object-contain" />
               </a>
             ))}
+          </div>
+          <div className="w-1/6 flex">
+            <img src={logofacingright} alt="" />
           </div>
         </div>
       </div>
