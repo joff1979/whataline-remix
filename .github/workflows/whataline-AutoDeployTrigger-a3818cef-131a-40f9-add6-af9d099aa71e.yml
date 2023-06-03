@@ -1,0 +1,42 @@
+name: Trigger auto deployment for whataline
+
+# When this action will be executed
+on:
+  # Automatically trigger it when detected changes in repo
+  push:
+    branches: 
+      [ main ]
+    paths:
+    - 'whataline-remix/**'
+    - '.github/workflows/whataline-AutoDeployTrigger-a3818cef-131a-40f9-add6-af9d099aa71e.yml'
+
+  # Allow mannually trigger 
+  workflow_dispatch:
+      
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout to the branch
+        uses: actions/checkout@v2
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.WHATALINE_AZURE_CREDENTIALS }}
+
+      - name: Build and push container image to registry
+        uses: azure/container-apps-deploy-action@v1
+        with:
+          appSourcePath: ${{ github.workspace }}/whataline-remix 
+          registryUrl: ca578f0043ffacr.azurecr.io
+          registryUsername: ${{ secrets.WHATALINE_REGISTRY_USERNAME }}
+          registryPassword: ${{ secrets.WHATALINE_REGISTRY_PASSWORD }}
+          containerAppName: whataline
+          resourceGroup: whataline-rm
+          imageToBuild: ca578f0043ffacr.azurecr.io/whataline:${{ github.sha }}
+          dockerfilePath: Dockerfile
+
+     
+
