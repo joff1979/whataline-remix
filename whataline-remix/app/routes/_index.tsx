@@ -7,13 +7,11 @@ import stage32 from "../images/stage32.svg";
 import livelong from "../images/Live Long cover - Rustic.png"
 import logofacingright from  "../images/writer_sketch-removebg-preview.png";
 import awards from "../images/awards";
- 
-import { useOptionalUser } from "~/utils";
+
 
 export const meta: V2_MetaFunction = () => [{ title: "Remix Notes" }];
 
 export default function Index() {
-  const user = useOptionalUser();
   return (
     <main className="relative min-h-screen bg-[#ECEBEC] sm:flex sm:items-center sm:justify-center">
      
