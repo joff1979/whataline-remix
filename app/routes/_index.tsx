@@ -9,8 +9,7 @@ import logofacingright from  "../images/writer_sketch-removebg-preview.png";
 import awards from "../images/awards";
 
 
-export const meta: V2_MetaFunction = () => [{ title: "Remix Notes" }];
-
+export const meta: V2_MetaFunction = () => [{ title: "Whataline" }];
 export default function Index() {
   return (
     <main className="relative min-h-screen bg-[#ECEBEC] sm:flex sm:items-center sm:justify-center">
